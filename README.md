@@ -74,16 +74,6 @@ flask --app app run
 
 Open [http://127.0.0.1:5000](http://127.0.0.1:5000) and search for a city, such as London, Paris, Tokyo, or New York.
 
-## Deploy on Render (optional)
-
-1. Push this repo to GitHub.
-2. Create a new **Web Service** on Render and connect the repo.
-3. Render can use the included `render.yaml`, or set manually:
-   - **Build command:** `pip install -r requirements.txt`
-   - **Start command:** `gunicorn app:app`
-4. Add environment variable: `OPENWEATHER_API_KEY` = your API key.
-5. Deploy and add the live URL to this README.
-
 ## Project structure
 
 ```text
@@ -91,15 +81,8 @@ app.py              # Routes, API calls, forecast aggregation, umbrella logic
 templates/          # Jinja2 HTML templates
 static/style.css    # Styling
 requirements.txt    # Python dependencies
-.env.example        # Template for API key (never commit .env)
+.env                # API key 
 ```
-
-## Interview talking points
-
-- **End-to-end flow:** "The browser posts a city to Flask. Flask calls OpenWeatherMap with `requests`, parses JSON in Python, applies umbrella rules, and returns HTML from Jinja templates."
-- **API integration:** "I use two endpoints - current weather and forecast - with the city query exactly as the user enters it, so searches can work worldwide."
-- **Data processing:** "Forecast data comes in 3-hour chunks; I group by date and take min/max temperature and max rain probability per day."
-- **Deliberate scope:** "No database or React - keeps the project easy to demo and maintain on a CV."
 
 ## Manual checks
 
