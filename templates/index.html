@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Search - Global Weather Dashboard{% endblock %}
+
+{% block content %}
+<section class="search-card">
+    <h2>Check the weather</h2>
+    <p>Enter any city to see current conditions, a 5-day forecast, and whether to bring an umbrella.</p>
+
+    {% if error %}
+    <div class="alert alert-error" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form method="post" action="{{ url_for('index') }}" class="search-form">
+        <label for="city">City</label>
+        <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="e.g. London, Paris, Tokyo, New York"
+            value="{{ city or '' }}"
+            required
+            autofocus
+        >
+        <button type="submit">Get weather</button>
+    </form>
+</section>
+{% endblock %}

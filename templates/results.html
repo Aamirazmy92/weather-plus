@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ current.city_name }} — UK Weather Dashboard{% endblock %}
+
+{% block content %}
+<p class="back-link"><a href="{{ url_for('index') }}">&larr; Search another city</a></p>
+
+<section class="umbrella-card {% if bring_umbrella %}umbrella-yes{% else %}umbrella-no{% endif %}">
+    <h2>Should I bring an umbrella?</h2>
+    <p class="umbrella-answer">{{ umbrella_message }}</p>
+</section>
+
+<section class="current-card">
+    <h2>{{ current.city_name }}</h2>
+    <div class="current-main">
+        <img
+            src="https://openweathermap.org/img/wn/{{ current.icon }}@2x.png"
+            alt="{{ current.description }}"
+            width="100"
+            height="100"
+        >
+        <div>
+            <p class="temp-large">{{ current.temp }}&deg;C</p>
+            <p class="description">{{ current.description }}</p>
+            <p class="meta">Feels like {{ current.feels_like }}&deg;C &middot; Humidity {{ current.humidity }}%</p>
+        </div>
+    </div>
+</section>
+
+<section class="forecast-card">
+    <h2>5-day forecast</h2>
+    <div class="forecast-grid">
+        {% for day in forecast %}
+        <article class="forecast-day">
+            <h3>{{ day.date }}</h3>
+            <p class="forecast-temps">{{ day.temp_min }}&deg; / {{ day.temp_max }}&deg;C</p>
+            <p class="forecast-desc">{{ day.description }}</p>
+            <p class="forecast-pop">Rain chance: {{ (day["pop"] * 100) | round | int }}%</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
