@@ -2,15 +2,11 @@
 
 A simple Python web app for checking city weather anywhere in the world: current conditions, a 5-day forecast, and a logic-based "should I bring an umbrella?" recommendation.
 
-Built as a portfolio project - small enough to explain clearly in a job interview.
+## Screenshots
 
-## Live demo
+<img width="1919" height="923" alt="image" src="https://github.com/user-attachments/assets/9e16c7c3-03ae-4a7d-9c24-ddb151c4203a" />
+<img width="906" height="899" alt="image" src="https://github.com/user-attachments/assets/b8830ffc-7b0c-42fe-a4ea-9dc46780cbda" />
 
-_Add your Render URL here after deploying._
-
-## Screenshot
-
-_Add a screenshot of the results page here for your GitHub README._
 
 ## Tech stack
 
