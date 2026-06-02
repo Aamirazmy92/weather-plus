@@ -84,14 +84,6 @@ requirements.txt    # Python dependencies
 .env                # API key 
 ```
 
-## Manual checks
-
-- [ ] Home page loads with search form
-- [ ] Valid city shows current weather, 5 days, and umbrella advice
-- [ ] Empty city shows validation message
-- [ ] Invalid city shows friendly error
-- [ ] Missing API key shows clear setup message
-
 ## License
 
 MIT — see [LICENSE](LICENSE) in this repository.
