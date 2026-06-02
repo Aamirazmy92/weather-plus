@@ -1,4 +1,4 @@
-# Global Weather Dashboard
+# weather-plus
 
 A simple Python web app for checking city weather anywhere in the world: current conditions, a 5-day forecast, and a logic-based "should I bring an umbrella?" recommendation.
 
@@ -115,4 +115,4 @@ requirements.txt    # Python dependencies
 
 ## License
 
-MIT - use freely for your portfolio.
+MIT — see [LICENSE](LICENSE) in this repository.
