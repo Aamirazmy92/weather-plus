@@ -2,6 +2,12 @@
 
 A simple Python web app for checking city weather anywhere in the world: current conditions, a 5-day forecast, and a logic-based "should I bring an umbrella?" recommendation.
 
+## Live demo
+
+[Try Weather+ live](https://weather-plus-beige.vercel.app/)
+
+Hosted on Vercel. Search for a city to see current weather, a 5-day forecast, and umbrella advice — no installation required.
+
 ## Screenshots
 
 <img width="1919" height="923" alt="image" src="https://github.com/user-attachments/assets/9e16c7c3-03ae-4a7d-9c24-ddb151c4203a" />
@@ -16,7 +22,7 @@ A simple Python web app for checking city weather anywhere in the world: current
 | Web framework | Flask |
 | Weather data | [OpenWeatherMap API](https://openweathermap.org/api) (free tier) |
 | Frontend | HTML + CSS (server-rendered with Jinja2) |
-| Deploy (optional) | [Render](https://render.com) |
+| Hosting | [Vercel](https://vercel.com) |
 
 ## How it works
 
